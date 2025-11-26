@@ -1,0 +1,212 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "Barlow", sans-serif;
+    font-style: normal;
+}
+
+body {
+    background-image: url(/assets/maldivas.png);
+    background-repeat: no-repeat;
+}
+
+body .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+header {
+    min-height: 6rem;
+    background: rgba(0, 0, 0, 0.26);
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    padding: 0 20px;
+    box-sizing: border-box;
+    gap: 20px;
+}
+
+#logo {
+    width: 78px;
+    height: auto;
+    align-self: center;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+li {
+    list-style: none;
+}
+
+.categorias {
+    color: #f0eded;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 8px 15px;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+.categorias:hover {
+    text-decoration: underline;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#menu {
+    color: #f0eded;
+    background: none;
+    border: none;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+#menu:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/*-----------------------------------------------------------------*/
+
+body .busca {
+    padding: 270px 150px;
+}
+
+h1 {
+    color: #F0EDED;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-shadow: 4.462px 4.462px rgba(0, 0, 0, 0.25);
+}
+
+/*----------------------------------------*/
+
+.busca-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.campo-busca {
+    width: 317.5px;
+    height: 116px;
+    background: rgba(0, 0, 0, 0.46);
+    border-radius: 6px 6px 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 25px;
+    position: relative;
+}
+
+.campo-busca::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-width: 317px;
+    height: 6px;
+    background: #0077B6;
+    border-radius: 0 0 6px 6px;
+}
+
+.campo-busca label {
+    color: #F0EDED;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    opacity: 0.8;
+    margin-bottom: 5px;
+}
+
+.campo-busca input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #F0EDED;
+    font-family: "Open Sans", sans-serif;
+    font-size: 31.462px;
+    font-weight: 400;
+}
+
+.troca {
+    width: 80px;
+    height: 0px;
+    background: rgba(0, 0, 0, 0.46);
+    border-radius: 6px 6px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.troca img {
+    width: 40px;
+    opacity: 0.9;
+}
+
+.btn-buscar {
+    width: 317.5px;
+    height: 116px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    color: #F0EDED;
+    font-family: "Open Sans", sans-serif;
+    font-size: 31.462px;
+    font-weight: 400;
+    background: linear-gradient(180deg, #0077B6 0%, #87D5FF 100%);
+    box-shadow: -1px 6px 4px rgba(0, 0, 0, 0.55);
+}
+
+.duas-datas {
+    display: flex;
+    gap: 10px;
+}
+
+.duas-datas input[type="date"] {
+    width: 130px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #F0EDED;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+}
+
+@media (max-width: 1024px) {
+    .busca-container {
+        justify-content: center;
+        gap: 15px;
+    }
+}
