@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-* {
-=======
 *{
->>>>>>> 10afc7764cf2343899150807bde5a9933f059f7f
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
@@ -10,35 +6,22 @@
     font-style: normal;
 }
 
-<<<<<<< HEAD
-body {
-=======
 body{
->>>>>>> 10afc7764cf2343899150807bde5a9933f059f7f
     background-image: url(/assets/maldivas.png);
     background-repeat: no-repeat;
 }
 
-<<<<<<< HEAD
-body .header {
-=======
+
 body .header{
->>>>>>> 10afc7764cf2343899150807bde5a9933f059f7f
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100vh;
     box-sizing: border-box;
-<<<<<<< HEAD
-}
 
-header {
-=======
-    
 }
 
 header{
->>>>>>> 10afc7764cf2343899150807bde5a9933f059f7f
     min-height: 6rem;
     background: rgba(0, 0, 0, 0.26);
     width: 100%;
@@ -49,32 +32,21 @@ header{
     gap: 20px;
 }
 
-<<<<<<< HEAD
-#logo {
-=======
 #logo{
->>>>>>> 10afc7764cf2343899150807bde5a9933f059f7f
     width: 78px;
     height: auto;
     align-self: center;
 }
 
-<<<<<<< HEAD
-nav {
-=======
+
 nav{
->>>>>>> 10afc7764cf2343899150807bde5a9933f059f7f
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-grow: 1;
 }
 
-<<<<<<< HEAD
-nav ul {
-=======
 nav ul{
->>>>>>> 10afc7764cf2343899150807bde5a9933f059f7f
     display: flex;
     align-items: center;
     gap: 2rem;
@@ -84,19 +56,15 @@ nav ul{
     justify-content: center;
 }
 
-<<<<<<< HEAD
 li {
     list-style: none;
 }
 
-.categorias {
-=======
 li{
     list-style: none;
 }
 
 .categorias{
->>>>>>> 10afc7764cf2343899150807bde5a9933f059f7f
     color: #f0eded;
     font-size: 30px;
     font-style: normal;
@@ -114,11 +82,7 @@ li{
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-<<<<<<< HEAD
-#menu {
-=======
 #menu{
->>>>>>> 10afc7764cf2343899150807bde5a9933f059f7f
     color: #f0eded;
     background: none;
     border: none;
@@ -138,26 +102,17 @@ li{
 
 /*-----------------------------------------------------------------*/
 
-<<<<<<< HEAD
 body .busca {
     padding: 270px 150px;
 }
 
-h1 {
-=======
-body .busca{
-    padding: 270px 150px;
-}
-
 h1{
->>>>>>> 10afc7764cf2343899150807bde5a9933f059f7f
     color: #F0EDED;
     font-size: 50px;
     font-style: normal;
     font-weight: 800;
     line-height: normal;
     text-shadow: 4.462px 4.462px rgba(0, 0, 0, 0.25);
-<<<<<<< HEAD
 }
 
 /*----------------------------------------*/
@@ -267,6 +222,7 @@ h1{
 .destinos {
     width: 100%;
     padding: 40px 0;
+    background-color: #005fa3;
     text-align: center;
 }
 
@@ -319,11 +275,8 @@ h1{
 .newsletter {
     width: 1307px;
     height: 175px;
-
     border-radius: 15px;
-
-    background: 
-        linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%),
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%),
         url('/assets/Personalizar-roteiro.png') lightgray -2.103px -155.116px / 100% 373.429% no-repeat;
     display: flex;
     align-items: center;
@@ -393,29 +346,3 @@ h1{
     width: 25px;
 }
 
-@media (max-width: 768px) {
-
-    .card-destino {
-        width: 90%;
-        height: 300px;
-    }
-
-    .newsletter-form {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .newsletter-form input {
-        width: 90%;
-    }
-
-    .newsletter-form button {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-    }
-}
-
-=======
-}
->>>>>>> 10afc7764cf2343899150807bde5a9933f059f7f
