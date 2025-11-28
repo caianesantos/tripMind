@@ -265,6 +265,9 @@ h1{
 }
 
 #card-destino {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 280px;
     height: 380px;
     border-radius: 15px;
@@ -286,9 +289,8 @@ h1{
 }
 
 #card-destino h5 {
-    position: absolute;
-    bottom: 15px;
-    left: 20px;
+    position:absolute;
+    bottom: 50%;
     color: #fff;
     font-size: 1.4rem;
     font-weight: bold;
