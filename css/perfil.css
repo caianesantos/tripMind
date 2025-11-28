@@ -28,8 +28,9 @@ header{
 
 /*----------------PLANOS--------------------------*/
 
-.seuplano{
-    height: 800px;
+.seu-plano{
+    min-height: 800px;
+    padding-bottom: 100px;
 }
 
 .plano{
@@ -39,7 +40,6 @@ header{
     padding-top: 100px;
     flex-direction: column;
     gap: 100px;
-
 }
 #card-plano{
     width: 949px;
@@ -132,7 +132,8 @@ header{
 /* ----------------------ROTEIROS SALVOS------------------------*/
 .roteiro{
     background: linear-gradient(180deg, #0077B6 0%, #87D5FF 100%);
-    height: 800px;
+    min-height: 800px;
+    padding-bottom: 50px;
 }
 .roteiro h2{
     padding-top: 50px;
@@ -144,55 +145,72 @@ header{
     font-weight: 700;
 }
 
-.cards{
+.cards-roteiro{
     display: flex;
     justify-content: center;
-    gap: 200px;
-    padding-top: 70px;
+    gap: 100px;
+    padding-top: 150px;
+    flex-wrap: wrap;
 }
-#card1{
+#card-rot1{
     width: 300px;
     height: 400px;
 }
-#card2{
+#card-rot2{
     width: 300px;
     height: 400px;
 }
-#card3{
+#card-rot3{
     width: 300px;
     height: 400px;
+}
+.cards-roteiro img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 15px; 
+    display: block;
 }
 
 /* ----------------------VIAGENS  ANTERIORES------------------------*/
-.roteiro{
-    background: linear-gradient(180deg, #0077B6 0%, #87D5FF 100%);
-    height: 800px;
+.viagens{
+    background-color: #fff;
+    min-height: 800px;
+    padding-bottom: 50px;
 }
-.roteiro h2{
+.viagens h2{
     padding-top: 50px;
     padding-left: 50px;
-    color: #fff;
+    color: #000000;
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     font-size: 50px;
     font-style: normal;
     font-weight: 700;
 }
 
-.cards{
+.cards-viagem{
     display: flex;
     justify-content: center;
-    gap: 200px;
-    padding-top: 70px;
+    gap: 100px;
+    padding-top: 150px;
+    flex-wrap: wrap;
 }
-#card1{
+#card-viag1{
     width: 300px;
     height: 400px;
 }
-#card2{
+#card-viag2{
     width: 300px;
     height: 400px;
 }
-#card3{
+#card-viag3{
     width: 300px;
     height: 400px;
+}
+.cards-viagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 15px; 
+    display: block; 
 }

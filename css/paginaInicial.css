@@ -295,6 +295,7 @@ h1{
     text-shadow: 0 2px 10px rgba(0,0,0,0.9);
 }
 
+
 .newsletter{
     display: flex;
     justify-content: center;
@@ -377,7 +378,8 @@ h1{
 /* ----------------------SUGESTÃO DE ROTEIROS------------------------*/
 .roteiro{
     background: linear-gradient(180deg, #0077B6 0%, #87D5FF 100%);
-    height: 800px;
+    min-height: 800px;
+    padding-bottom: 50px;
 }
 .roteiro h2{
     padding-top: 50px;
@@ -392,7 +394,7 @@ h1{
 .cards{
     display: flex;
     justify-content: center;
-    gap: 200px;
+    gap: 100px;
     padding-top: 70px;
 }
 #card1{
@@ -406,6 +408,13 @@ h1{
 #card3{
     width: 300px;
     height: 400px;
+}
+.cards img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 15px; 
+    display: block; 
 }
 
 /* ----------------------SOBRE NÓS------------------------*/
@@ -458,7 +467,8 @@ h1{
 
 .orcamento{
     background: linear-gradient(180deg, #0077B6 0%, #87D5FF 100%);
-    height: 800px;
+    min-height: 800px;
+    padding-bottom: 50px;
 }
 
 .orcamento h2{
