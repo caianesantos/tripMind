@@ -10,6 +10,9 @@ from itineraries.serializers import ItinerarySearchSerializer, ItinerarySerializ
 
 
 def _generate_mock_plan(validated_data):
+    def format_date(d):
+        return d.strftime("%d/%m/%Y")
+
     budget_level = validated_data["budget_level"]
     base_budget = {"economico": 2500, "intermediario": 4500, "premium": 9000}.get(budget_level, 4000)
     transport_options = [
@@ -29,7 +32,7 @@ def _generate_mock_plan(validated_data):
     total_budget = base_budget + int(total_nights * lodging_options[0]["price_per_night"])
     ai_summary = (
         f"Roteiro {budget_level} para {validated_data['destination']} saindo de {validated_data['origin']} "
-        f"entre {validated_data['start_date']} e {validated_data['end_date']}. "
+        f"entre {format_date(validated_data['start_date'])} e {format_date(validated_data['end_date'])}. "
         "Inclui opções de transporte e hospedagem balanceadas com o orçamento informado."
     )
     return {
@@ -85,3 +88,12 @@ class SavedItineraryListView(APIView):
         saved = SavedItinerary.objects.filter(user=request.user)
         data = SavedItinerarySerializer(saved, many=True).data
         return Response(data)
+
+
+class SavedItineraryDeleteView(APIView):
+    permission_classes = [permissions.IsAuthenticated]
+
+    def delete(self, request, pk):
+        saved = get_object_or_404(SavedItinerary, id=pk, user=request.user)
+        saved.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)

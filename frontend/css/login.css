@@ -1,55 +1,65 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-*{
-    margin: 0%;
-    padding: 0%;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: "open sans";
 }
 
+html,
+body {
+    height: 100%;
+}
+
 body {
     display: flex;
-    height: 100%;
     width: 100%;
+    overflow: hidden;
 }
 
 .sign_in {
     flex: 1;
+    height: 100vh;
     background-image: url('../assets/farol-da-barra.png');
     background-color: rgba(0, 119, 182, 100);
     background-blend-mode: multiply;
     background-position: left;
     background-repeat: no-repeat;
-    padding: 60px 20px;
+    padding: 60px 30px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.titulo-sessao{
+.titulo-sessao {
     text-align: center;
-    color:rgba(240, 237, 237, 1);
+    color: rgba(240, 237, 237, 1);
     font-size: 60px;
     font-weight: 800;
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-form{
-    padding: 93px;
+form {
+    padding: 40px 20px;
     justify-content: center;
     align-items: center;
     display: flex;
     flex-direction: column;
-    gap: 110px;
+    gap: 28px;
 }
 
-.align-inputs{
+.align-inputs {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 0.5rem;
+    gap: 12px;
 }
 
-#email{
+#email,
+#senha {
     width: 408px;
     height: 60px;
     background-color: D9D9D9;
@@ -64,25 +74,10 @@ form{
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-#senha{
-    width: 408px;
-    height: 60px;
-    background-color: D9D9D9;
-    border: 0;
-    border-radius: 5px;
-    color: #9F9F9F;
-    font-size: 16px;
-    font-style: italic;
-    font-weight: 300;
-    line-height: normal;
-    padding-left: 23px;
-    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-form button{
+form button {
     width: 200px;
     height: 45px;
-    background-image: linear-gradient(to top,rgba(0, 119, 182, 1),rgba(135, 213, 255, 1));
+    background-image: linear-gradient(to top, rgba(0, 119, 182, 1), rgba(135, 213, 255, 1));
     box-shadow: 0 -3px 3.2px 0 rgba(0, 0, 0, 0.25) inset, 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     border-radius: 15px;
     border: 0;
@@ -95,7 +90,7 @@ form button{
     cursor: pointer;
 }
 
-form button:hover{
+form button:hover {
     background-image: none;
     box-shadow: none;
     background-color: transparent;
@@ -107,19 +102,20 @@ form button:hover{
 
 /*-----------------------------------------------------*/
 
-.create_account{
+.create_account {
+    flex: 1;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 10rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding: 60px 30px;
     background-color: rgba(0, 119, 182, 100);
+    justify-content: center;
 }
 
-.sub-sessao{
+.sub-sessao {
     text-align: center;
-    color:rgba(240, 237, 237, 1);
+    color: rgba(240, 237, 237, 1);
     font-size: 55px;
     font-weight: 800;
     font-style: normal;
@@ -127,17 +123,17 @@ form button:hover{
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-p{
+p {
     text-align: center;
     color: #fff;
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    padding: 75px 75px;
+    padding: 20px 20px 30px;
 }
 
-.btn-navegar{
+.btn-navegar {
     width: 200px;
     height: 45px;
     background-color: transparent;
@@ -153,8 +149,8 @@ p{
     cursor: pointer;
 }
 
-.btn-navegar:hover{
-    background-image: linear-gradient(to top,rgba(0, 119, 182, 1),rgba(135, 213, 255, 1));
+.btn-navegar:hover {
+    background-image: linear-gradient(to top, rgba(0, 119, 182, 1), rgba(135, 213, 255, 1));
     box-shadow: 0 -3px 3.2px 0 rgba(0, 0, 0, 0.25) inset, 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     border-radius: 15px;
     border: 0;
@@ -165,4 +161,30 @@ p{
     font-weight: 300;
     line-height: normal;
     cursor: pointer;
+}
+
+.align-buttons{
+    display: flex;
+    gap: 12px;
+}
+
+.btn-social{
+    display: inline-flex;
+    width: 48px;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,0.08);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn-social img{
+    width: 24px;
+    height: 24px;
+}
+.btn-social:hover{
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.16);
 }

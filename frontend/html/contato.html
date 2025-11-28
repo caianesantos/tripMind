@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Mind - Contato</title>
+    <link rel="icon" href="../assets/logo.svg" type="image/Trip">
+    <link rel="stylesheet" href="../css/contato.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="brand">
+            <img src="../assets/logo.svg" alt="Trip Mind">
+            <span>Contato</span>
+        </div>
+        <nav class="actions">
+            <a class="btn-link" href="paginaInicial.html">Home</a>
+            <a class="btn-link" href="sobre.html">Sobre nós</a>
+            <a class="btn-link" href="viagens.html">Minhas viagens</a>
+            <a class="btn-link" href="perfil.html">Perfil</a>
+            <a class="btn-link logout-link" href="#" role="button">Sair</a>
+        </nav>
+    </header>
+
+    <main class="content">
+        <section class="panel">
+            <div class="panel-head">
+                <div>
+                    <h1>Fale com a Trip Mind</h1>
+                    <p>Envie sua dúvida, sugestão ou pedido de suporte. Responderemos o quanto antes.</p>
+                </div>
+            </div>
+            <form id="contact-form" class="form">
+                <div class="field">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                </div>
+                <div class="field">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+                </div>
+                <div class="field">
+                    <label for="assunto">Assunto</label>
+                    <input type="text" id="assunto" name="assunto" placeholder="Assunto da mensagem">
+                </div>
+                <div class="field">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" rows="6" placeholder="Conte mais detalhes..." required></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary">Enviar</button>
+                </div>
+                <p class="status hidden"></p>
+            </form>
+        </section>
+    </main>
+
+    <script src="../js/contato.js"></script>
+</body>
+</html>

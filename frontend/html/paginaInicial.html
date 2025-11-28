@@ -15,17 +15,12 @@
         <img id="logo" src="../assets/logo.svg" alt="Trip Mind">
         <nav>
             <ul class="menu-lista">
-                <li><a class="categorias" href="#">Home</a></li>
-                <li><a class="categorias" href="#">Sobre nós</a></li>
-                <li><a class="categorias" href="#">Serviços</a></li>
-                <li><a class="categorias" href="#">Contato</a></li>
+                <li><a class="categorias" href="sobre.html">Sobre nós</a></li>
+                <li><a class="categorias" href="viagens.html">Minhas viagens</a></li>
+                <li><a class="categorias" href="contato.html">Contato</a></li>
+                <li><a class="categorias" href="perfil.html">Perfil</a></li>
             </ul>
-            <button id="menu">
-                <img src="../assets/menu-hamburguer.png" alt="">
-            </button>
-            <div class="menu-dropdown hidden">
-                <button type="button" class="menu-action" data-action="logout">Sair</button>
-            </div>
+            <a class="categorias logout-link logout-standalone" href="#" role="button">Sair</a>
         </nav>
     </header>
     <main>
@@ -133,20 +128,41 @@
                     </form>
                 </div>
             </div>
-        </section> 
-        <section class="roteiro">
-            <h2>Sugestões de Roteiros</h2>
-                <div class="cards">
-                    <div id="card1">
-                        <img src="../assets/paris.png" alt="paris">
-                    </div>
-                    <div id="card2">
-                        <img src="../assets/roma.png" alt="roma">
-                    </div>
-                    <div id="3">
-                        <img src="../assets/barcelona.png" alt="barcelona">
-                    </div>
+        </section>
+        <section class="orcamento">
+            <h2>Orçamentos Sugeridos</h2>
+            <div class="cards-orcamento">
+                <div id="card-o-1">
+                    <h3>Econômico</h3>
+                    <p class="orcamento-valor">a partir de R$ 2.000</p>
+                    <ul>
+                        <li>Hospedagem smart (hostel/hotel 2-3★)</li>
+                        <li>Transporte low-cost e ônibus</li>
+                        <li>Roteiro otimizado para economizar</li>
+                    </ul>
+                    <button type="button" id="btn-esc1">Escolher plano</button>
                 </div>
+                <div id="card-o-2">
+                    <h3>Intermediário</h3>
+                    <p class="orcamento-valor">a partir de R$ 4.500</p>
+                    <ul>
+                        <li>Hotéis 3-4★ bem localizados</li>
+                        <li>Voos regulares e transfers básicos</li>
+                        <li>Experiências balanceadas</li>
+                    </ul>
+                    <button type="button" id="btn-esc2">Escolher plano</button>
+                </div>
+                <div id="card-o-3">
+                    <h3>Premium</h3>
+                    <p class="orcamento-valor">a partir de R$ 9.000</p>
+                    <ul>
+                        <li>Hotéis boutique/5★</li>
+                        <li>Voos executivos e transfers privados</li>
+                        <li>Experiências exclusivas e personalização total</li>
+                    </ul>
+                    <button type="button" id="btn-esc3">Escolher plano</button>
+                </div>
+            </div>
         </section>
         <section class="sobre-nos">
             <div class="aviao">
@@ -160,30 +176,8 @@
                     <p>Na TripMind, acreditamos que viajar é realizar sonhos. Por isso, unimos tecnologia e atendimento personalizado para oferecer os melhores destinos, pacotes e experiências únicas.
                     Conosco, cada detalhe da sua viagem é planejado para que você só precise se preocupar em aproveitar.
                     TripMind — a sua viagem começa aqui.</p>
-                    <button type="button" class="btn-saiba-mais">Saiba mais</button>
+                    <a class="btn-saiba-mais" href="sobre.html">Saiba mais</a>
                 </div>
-        </section>
-        <section class="orcamento">
-            <h2>Orçamentos Sugeridos</h2>
-            <div class="cards-orcamento">
-                <div id="card-o-1">
-                    <button type="button" id="btn-esc1">Escolher plano!</button>
-                </div>
-                <div id="card-o-2">
-                    <button type="button" id="btn-esc2">Escolher plano!</button>
-                </div>
-                <div id="card-o-3">
-                    <button type="button" id="btn-esc3">Escolher plano!</button>
-                </div>
-            </div>
-        </section>
-        <section class="salvos">
-            <div class="salvos-header">
-                <h2>Minhas viagens salvas</h2>
-                <button type="button" class="btn-carregar-salvos">Atualizar</button>
-            </div>
-            <p class="salvos-status hidden"></p>
-            <div class="salvos-list"></div>
         </section>
     </main>
     <script src="../js/paginaInicial.js"></script>

@@ -13,15 +13,22 @@
         <p>Já tem uma conta?</p>
         <button class="btn-navegar" data-target="login.html" type="button">Acessar Conta</button>
         <div class="align-buttons">
-            <a href="../assets/google.png">google</a>
-            <a href="../assets/facebook.png">facebook</a>
-            <a href="../assets/x.png">X</a>
+            <a class="btn-social" href="#">
+                <img src="../assets/google.png" alt="Google">
+            </a>
+            <a class="btn-social" href="#">
+                <img src="../assets/facebook.png" alt="Facebook">
+            </a>
+            <a class="btn-social" href="#">
+                <img src="../assets/x.png" alt="X">
+            </a>
         </div>
     </section>
     <section class="sign_in">
         <h1 class="titulo-sessao">Criar Conta</h1>
         <form id="register-form" action="#">
             <div class="align-inputs">
+                <input type="text" id="nome" placeholder="Nome" required>
                 <input type="email" id="email" placeholder="E-mail" required>
                 <input type="password" id="senha" placeholder="Senha" required minlength="8">
                 <input type="text" id="telefone" placeholder="Telefone">
@@ -31,3 +38,4 @@
     </section>
     <script src="../js/auth.js"></script>
 </body>
+</html>

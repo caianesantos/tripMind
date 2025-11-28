@@ -75,13 +75,14 @@ if (loginForm) {
 if (registerForm) {
     registerForm.addEventListener("submit", async (e) => {
         e.preventDefault();
+        const first_name = registerForm.querySelector("#nome")?.value.trim();
         const email = registerForm.querySelector("#email")?.value.trim();
         const password = registerForm.querySelector("#senha")?.value;
         const phone = registerForm.querySelector("#telefone")?.value.trim();
         const submitBtn = registerForm.querySelector("button[type='submit']");
         setLoading(submitBtn, true, "Criando...");
         try {
-            const data = await postJson("/auth/register/", { email, password, phone });
+            const data = await postJson("/auth/register/", { email, password, phone, first_name });
             saveToken(data.token);
             alert("Conta criada! Você já está logado.");
             window.location.href = "paginaInicial.html";

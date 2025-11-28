@@ -18,6 +18,12 @@ const FALLBACK_CITIES = [
 
 const formatCurrency = (value = 0) =>
     new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(value);
+const formatDate = (value = "") => {
+    if (!value) return "";
+    const [y, m, d] = value.split("-");
+    if (!y || !m || !d) return value;
+    return `${d}/${m}/${y}`;
+};
 
 const validarEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 const normalizeText = (text = "") => text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
@@ -194,92 +200,16 @@ const attachAutocomplete = (input) => {
 attachAutocomplete(origemInput);
 attachAutocomplete(destinoInput);
 
-// Minhas viagens salvas
-const salvosSection = document.querySelector(".salvos");
-if (salvosSection) {
-    const btnLoad = salvosSection.querySelector(".btn-carregar-salvos");
-    const statusEl = salvosSection.querySelector(".salvos-status");
-    const listEl = salvosSection.querySelector(".salvos-list");
-
-    const renderStatus = (msg, hidden = false) => {
-        if (!statusEl) return;
-        statusEl.textContent = msg;
-        statusEl.classList.toggle("hidden", hidden);
-    };
-
-    const renderList = (items) => {
-        if (!listEl) return;
-        if (!items.length) {
-            listEl.innerHTML = "";
-            renderStatus("Nenhum roteiro salvo ainda.", false);
-            return;
-        }
-        renderStatus("", true);
-        listEl.innerHTML = items
-            .map(
-                (item) => `
-                <div class="salvo-card">
-                    <h4>${item.itinerary.destination || "Destino"}</h4>
-                    <div class="salvo-meta">
-                        <span>${item.itinerary.origin || "Origem"} → ${item.itinerary.destination || ""}</span>
-                        <span>${item.itinerary.start_date || ""} a ${item.itinerary.end_date || ""}</span>
-                        <span class="salvo-orcamento">${formatCurrency(item.itinerary.total_budget || 0)}</span>
-                    </div>
-                </div>
-            `
-            )
-            .join("");
-    };
-
-    const carregarSalvos = async () => {
-        const token = getToken();
-        if (!token) {
-            renderStatus("Faça login para ver seus roteiros salvos.", false);
-            if (listEl) listEl.innerHTML = "";
-            return;
-        }
-        renderStatus("Carregando...", false);
-        if (btnLoad) btnLoad.disabled = true;
-        try {
-            const data = await getJson("/itineraries/saved/", token);
-            renderList(data || []);
-        } catch (err) {
-            renderStatus(err.message || "Não foi possível carregar os roteiros.", false);
-        } finally {
-            if (btnLoad) btnLoad.disabled = false;
-        }
-    };
-
-    if (btnLoad) {
-        btnLoad.addEventListener("click", carregarSalvos);
-    }
-
-    carregarSalvos();
-}
-
-// Menu hambúrguer: logout
-const menuBtn = document.getElementById("menu");
-const menuDropdown = document.querySelector(".menu-dropdown");
-if (menuBtn && menuDropdown) {
-    menuBtn.addEventListener("click", () => {
-        menuDropdown.classList.toggle("hidden");
+// Logout direto no menu
+const logoutLinks = document.querySelectorAll(".logout-link");
+logoutLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+        e.preventDefault();
+        clearToken();
+        alert("Você saiu da sua conta.");
+        window.location.href = "login.html";
     });
-
-    const logoutBtn = menuDropdown.querySelector('[data-action="logout"]');
-    if (logoutBtn) {
-        logoutBtn.addEventListener("click", () => {
-            clearToken();
-            alert("Você saiu da sua conta.");
-            window.location.href = "login.html";
-        });
-    }
-
-    document.addEventListener("click", (e) => {
-        if (!menuDropdown.contains(e.target) && e.target !== menuBtn && !menuBtn.contains(e.target)) {
-            menuDropdown.classList.add("hidden");
-        }
-    });
-}
+});
 
 // Carrossel com arraste e auto slide
 const carrossel = document.querySelector(".carrossel-destinos");
@@ -445,7 +375,7 @@ if (buscaForm) {
         resultado.classList.remove("hidden");
         if (statusEl) statusEl.textContent = "Roteiro pronto";
         if (resumoEl) resumoEl.textContent = data.ai_summary || "Roteiro gerado com sucesso.";
-        if (periodoEl) periodoEl.textContent = `Período: ${data.start_date} a ${data.end_date}`;
+        if (periodoEl) periodoEl.textContent = `Período: ${formatDate(data.start_date)} a ${formatDate(data.end_date)}`;
         if (totalEl) totalEl.textContent = `Orçamento estimado: ${formatCurrency(data.total_budget)}`;
 
         if (listaTransporte) {

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Mind - Minhas Viagens</title>
+    <link rel="icon" href="../assets/logo.svg" type="image/Trip">
+    <link rel="stylesheet" href="../css/viagens.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="brand">
+            <img src="../assets/logo.svg" alt="Trip Mind">
+            <span>Minhas viagens</span>
+        </div>
+        <nav class="actions">
+            <a class="btn-link" href="paginaInicial.html">Home</a>
+            <a class="btn-link" href="sobre.html">Sobre nós</a>
+            <a class="btn-link" href="contato.html">Contato</a>
+            <a class="btn-link" href="perfil.html">Perfil</a>
+            <a class="btn-link logout-link" href="#" role="button">Sair</a>
+        </nav>
+    </header>
+
+    <main class="content">
+        <div class="panel">
+            <div class="panel-head">
+                <div>
+                    <h1>Viagens salvas</h1>
+                    <p>Visualize e gerencie os roteiros que você guardou no perfil.</p>
+                </div>
+                <div class="panel-actions">
+                    <button type="button" class="btn-refresh">Atualizar</button>
+                </div>
+            </div>
+            <p class="status hidden"></p>
+            <div class="cards"></div>
+        </div>
+    </main>
+
+    <script src="../js/viagens.js"></script>
+</body>
+</html>

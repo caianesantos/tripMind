@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Mind - Perfil</title>
+    <link rel="icon" href="../assets/logo.svg" type="image/Trip">
+    <link rel="stylesheet" href="../css/perfil.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="brand">
+            <img src="../assets/logo.svg" alt="Trip Mind">
+            <div class="user-meta">
+                <span class="user-name">Olá, viajante!</span>
+                <span class="user-email"></span>
+            </div>
+        </div>
+        <nav class="actions">
+            <a class="btn-link" href="paginaInicial.html">Home</a>
+            <a class="btn-link" href="sobre.html">Sobre nós</a>
+            <a class="btn-link" href="viagens.html">Minhas viagens</a>
+            <a class="btn-link" href="contato.html">Contato</a>
+            <a class="btn-link logout-link" href="#" role="button">Sair</a>
+        </nav>
+    </header>
+
+    <main class="content">
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Seu perfil Trip Mind</h1>
+                <p>Roteiros salvos, viagens anteriores e preferências em um só lugar.</p>
+                <div class="badges">
+                    <span class="badge">IA + curadoria</span>
+                    <span class="badge">Planejamento rápido</span>
+                    <span class="badge">Orçamento respeitado</span>
+                </div>
+            </div>
+            <div class="hero-card">
+                <div class="avatar">
+                    <img src="../assets/logo.svg" alt="Perfil">
+                </div>
+                <div class="plan">
+                    <h3>Plano atual</h3>
+                    <p>Plano Básico • Ideal para começar</p>
+                    <p class="hint">Personalize quando quiser.</p>
+                </div>
+                <div class="newsletter">
+                    <p>Receba novidades e promoções</p>
+                    <p class="email-info">Usaremos seu email: <span class="profile-email-news"></span></p>
+                    <form class="newsletter-form">
+                        <label class="checkbox">
+                            <input type="checkbox" id="aceito-news"> Quero receber por email
+                        </label>
+                        <button type="submit">Confirmar</button>
+                    </form>
+                    <p class="newsletter-status hidden"></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-head">
+                <div>
+                    <h2>Roteiros salvos</h2>
+                    <p>Gerencie os roteiros que você guardou no perfil.</p>
+                </div>
+                <div class="section-actions">
+                    <button type="button" class="btn-refresh-saved">Atualizar</button>
+                </div>
+            </div>
+            <p class="status-saved hidden"></p>
+            <div class="cards-saved"></div>
+        </section>
+
+        <section class="section">
+            <div class="section-head">
+                <div>
+                    <h2>Viagens anteriores</h2>
+                    <p>Reviva os destinos que você já explorou.</p>
+                </div>
+            </div>
+            <div class="cards-history">
+                <div class="history-card placeholder">
+                    <div class="chip">Em breve</div>
+                    <h3>Seu histórico de viagens</h3>
+                    <p>Mostraremos aqui as viagens concluídas quando você começar a explorar.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/perfil.js"></script>
+</body>
+</html>
