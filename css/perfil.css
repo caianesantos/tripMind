@@ -1,0 +1,130 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "Barlow", sans-serif;
+    font-style: normal;
+}
+
+header{
+    background: url(/assets/lencois-maranhenses.png);
+    height: 20rem;
+}
+.perfil{
+    display: flex;
+    align-items: center;
+    padding-left: 150px;
+    padding-top: 80px;
+    gap: 40px;
+}
+.perfil h2{
+    color: #000;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;    
+}
+
+/*----------------PLANOS--------------------------*/
+
+.seuplano{
+    height: 800px;
+}
+
+.plano{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    flex-direction: column;
+    gap: 100px;
+
+}
+#card-plano{
+    width: 949px;
+    height: 579px;
+    border-radius: 15px;
+    border: 1px solid #90847F;
+    background: linear-gradient(180deg, #1A5D24 56.25%, #53945D 100%);
+    box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.newsletter{
+    display: flex;
+    justify-content: center;
+}
+
+.nlt{
+    width: 1100px;
+    height: 150px;
+    border-radius: 15px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%),
+        url('/assets/Personalizar-roteiro.png') lightgray -2.103px -155.116px / 100% 373.429% no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px; 
+}
+
+#newsletter-texto p {
+    width: 468px;
+    height: 69px;
+
+    color: #F0EDED;
+    font-family: "Merriweather", serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.newsletter-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.newsletter-form input {
+    width: 300px;
+    height: 50px;
+    border: none;
+    outline: none;
+
+    background: rgba(255, 255, 255, 0.25); 
+    backdrop-filter: blur(3px);
+
+    padding-left: 15px;
+    border-radius: 8px;
+    font-size: 16px;
+
+    color: white;
+}
+
+.newsletter-form input::placeholder {
+    color: #E0E0E0;
+}
+
+.newsletter-form input:focus {
+    border-color: #005fa3;
+}
+
+.newsletter-form button {
+    width: 60px;
+    height: 50px;
+    border: none;
+    border-radius: 8px;
+    background: #0077B6;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.newsletter-form button:hover {
+    background-color: #005fa3;
+}
+
+.newsletter-form button img {
+    width: 25px;
+}
