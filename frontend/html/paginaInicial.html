@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Trip Mind - Página Inicial</title>
+    <link rel="icon" href="../assets/logo.svg" type="image/Trip">
+    <link rel="stylesheet" href="../css/paginaInicial.css">
+    <link rel="stylesheet" href="../css/responsividade/paginaInicial/1024.css">
+    <link rel="stylesheet" href="../css/responsividade/paginaInicial/768.css">
+</head>
+<body>
+    <header>
+        <img id="logo" src="../assets/logo.svg" alt="Trip Mind">
+        <nav>
+            <ul class="menu-lista">
+                <li><a class="categorias" href="#">Home</a></li>
+                <li><a class="categorias" href="#">Sobre nós</a></li>
+                <li><a class="categorias" href="#">Serviços</a></li>
+                <li><a class="categorias" href="#">Contato</a></li>
+            </ul>
+            <button id="menu">
+                <img src="../assets/menu-hamburguer.png" alt="">
+            </button>
+            <div class="menu-dropdown hidden">
+                <button type="button" class="menu-action" data-action="logout">Sair</button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="busca">
+            <h1>Vamos juntos realizar <br> a viagem dos seus sonhos.</h1>
+            <form action="#">
+                <div class="select-options">
+                    <div class="busca-container">
+
+                        <div class="campo-busca">
+                            <label>Ida / Volta</label>
+                            <div class="duas-datas">
+                                <input type="date" id="data-ida" name="data-ida">
+                                <input type="date" id="data-volta" name="data-volta">
+                            </div>
+                        </div>
+
+                        <div class="campo-busca">
+                            <label for="origem">Origem</label>
+                            <input type="text" id="origem" name="origem" placeholder="origem">
+                        </div>
+
+                        <div class="troca">
+                            <button id="btnTroca"><img src="../assets/Sync-Alt.png" alt="Trocar"></button>
+                        </div>
+
+                        <div class="campo-busca">
+                            <label for="destino">Destino</label>
+                            <input type="text" id="destino" name="destino" placeholder="destino">
+                        </div>
+
+                        <div class="campo-busca">
+                            <label for="orcamento">Orçamento</label>
+                            <select id="orcamento" name="orcamento">
+                                <option value="economico">Econômico</option>
+                                <option value="intermediario" selected>Intermediário</option>
+                                <option value="premium">Premium</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn-buscar">
+                            Buscar
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <div id="resultado-roteiro" class="resultado-roteiro hidden">
+                <div class="resultado-header">
+                    <h3>Roteiro gerado</h3>
+                    <span class="resultado-status">IA pronta</span>
+                </div>
+                <p class="resultado-resumo"></p>
+                <div class="resultado-grid">
+                    <div>
+                        <h4>Transporte</h4>
+                        <ul class="lista-transporte"></ul>
+                    </div>
+                    <div>
+                        <h4>Hospedagem</h4>
+                        <ul class="lista-hospedagem"></ul>
+                    </div>
+                </div>
+                <div class="resultado-meta">
+                    <span class="resultado-periodo"></span>
+                    <span class="resultado-total"></span>
+                </div>
+                <button type="button" class="btn-salvar-roteiro">Salvar no meu perfil</button>
+            </div>
+        </section>
+        <section class="destinos">
+            <h2>Destinos mais populares</h2>
+            
+            <div class="carrossel-destinos">
+
+                <div id="card-destino">
+                    <img src="../assets/PlanoA (2).png" alt="Brasil">
+                    <h5>BRASIL</h5>
+                </div>
+
+                <div id="card-destino">
+                    <img src="../assets/PlanoB.png" alt="Itália">
+                    <h5>ITÁLIA</h5>
+                </div>
+
+                <div id="card-destino">
+                    <img src="../assets/planoC.png" alt="Grécia">
+                    <h5>GRÉCIA</h5>
+                </div>
+
+                <div id="card-destino">
+                    <img src="../assets/barcelona.png" alt="Espanha">
+                    <h5>ESPANHA</h5>
+                </div>
+
+            </div>
+            <div class="newsletter">
+                <div class="nlt">
+                    <div id="newsletter-texto">
+                        <p>Receba as novidades e <br> promoções em primeira mão</p>
+                    </div>
+    
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Digite seu email..." required>
+                        <button type="submit"><img src="../assets/Sent.png" alt="enviar"></button>
+                    </form>
+                </div>
+            </div>
+        </section> 
+        <section class="roteiro">
+            <h2>Sugestões de Roteiros</h2>
+                <div class="cards">
+                    <div id="card1">
+                        <img src="../assets/paris.png" alt="paris">
+                    </div>
+                    <div id="card2">
+                        <img src="../assets/roma.png" alt="roma">
+                    </div>
+                    <div id="3">
+                        <img src="../assets/barcelona.png" alt="barcelona">
+                    </div>
+                </div>
+        </section>
+        <section class="sobre-nos">
+            <div class="aviao">
+                <img src="../assets/aviao.png" alt="aviao">
+            </div>
+            <div class="">
+
+            </div>
+                <div class="txt-sobre">
+                    <h2>Sobre Nós</h2>
+                    <p>Na TripMind, acreditamos que viajar é realizar sonhos. Por isso, unimos tecnologia e atendimento personalizado para oferecer os melhores destinos, pacotes e experiências únicas.
+                    Conosco, cada detalhe da sua viagem é planejado para que você só precise se preocupar em aproveitar.
+                    TripMind — a sua viagem começa aqui.</p>
+                    <button type="button" class="btn-saiba-mais">Saiba mais</button>
+                </div>
+        </section>
+        <section class="orcamento">
+            <h2>Orçamentos Sugeridos</h2>
+            <div class="cards-orcamento">
+                <div id="card-o-1">
+                    <button type="button" id="btn-esc1">Escolher plano!</button>
+                </div>
+                <div id="card-o-2">
+                    <button type="button" id="btn-esc2">Escolher plano!</button>
+                </div>
+                <div id="card-o-3">
+                    <button type="button" id="btn-esc3">Escolher plano!</button>
+                </div>
+            </div>
+        </section>
+        <section class="salvos">
+            <div class="salvos-header">
+                <h2>Minhas viagens salvas</h2>
+                <button type="button" class="btn-carregar-salvos">Atualizar</button>
+            </div>
+            <p class="salvos-status hidden"></p>
+            <div class="salvos-list"></div>
+        </section>
+    </main>
+    <script src="../js/paginaInicial.js"></script>
+</body>
+</html>
+
