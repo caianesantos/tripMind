@@ -1,0 +1,52 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "Barlow", sans-serif;
+    font-style: normal;
+}
+
+body{
+
+}
+header{
+    background: url(/assets/lencois-maranhenses.png);
+    height: 20rem;
+}
+.perfil{
+    display: flex;
+    align-items: center;
+    padding-left: 150px;
+    padding-top: 80px;
+    gap: 40px;
+}
+.perfil h2{
+    color: #000;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;    
+}
+
+/*----------------PLANOS--------------------------*/
+
+.seuplano{
+    height: 800px;
+}
+
+.plano{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+
+}
+#card-plano{
+    width: 949px;
+    height: 579px;
+    border-radius: 15px;
+    border: 1px solid #90847F;
+    background: linear-gradient(180deg, #1A5D24 56.25%, #53945D 100%);
+    box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.25);
+}
