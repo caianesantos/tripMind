@@ -1,4 +1,4 @@
-* {
+*{
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
@@ -6,20 +6,22 @@
     font-style: normal;
 }
 
-body {
+body{
     background-image: url(/assets/maldivas.png);
     background-repeat: no-repeat;
 }
 
-body .header {
+
+body .header{
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100vh;
     box-sizing: border-box;
+
 }
 
-header {
+header{
     min-height: 6rem;
     background: rgba(0, 0, 0, 0.26);
     width: 100%;
@@ -30,20 +32,21 @@ header {
     gap: 20px;
 }
 
-#logo {
+#logo{
     width: 78px;
     height: auto;
     align-self: center;
 }
 
-nav {
+
+nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-grow: 1;
 }
 
-nav ul {
+nav ul{
     display: flex;
     align-items: center;
     gap: 2rem;
@@ -57,7 +60,11 @@ li {
     list-style: none;
 }
 
-.categorias {
+li{
+    list-style: none;
+}
+
+.categorias{
     color: #f0eded;
     font-size: 30px;
     font-style: normal;
@@ -75,7 +82,7 @@ li {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-#menu {
+#menu{
     color: #f0eded;
     background: none;
     border: none;
@@ -98,7 +105,7 @@ body .busca {
     padding: 270px 150px;
 }
 
-h1 {
+h1{
     color: #F0EDED;
     font-size: 50px;
     font-style: normal;
@@ -111,15 +118,20 @@ h1 {
 
 .busca-container {
     display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
     align-items: center;
-    gap: 30px;
     margin-top: 40px;
-    flex-wrap: wrap;
+    gap: 15px;
+
+
 }
 
 .campo-busca {
     width: 317.5px;
     height: 116px;
+    flex: 1;
     background: rgba(0, 0, 0, 0.46);
     border-radius: 6px 6px 0 0;
     display: flex;
@@ -127,6 +139,7 @@ h1 {
     justify-content: center;
     padding-left: 25px;
     position: relative;
+    margin-bottom: 1px;
 }
 
 .campo-busca::after {
@@ -159,14 +172,17 @@ h1 {
     font-weight: 400;
 }
 
-.troca button {
-    width: 80px;
-    height: 0px;
-    background: rgba(0, 0, 0, 0.46);
-    border-radius: 6px 6px 0 0;
+.troca {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0);
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: -20px;
+    margin-bottom: -20px;
+    z-index: 10;
 }
 
 .troca button img {
@@ -224,13 +240,19 @@ h1 {
 .destinos {
     width: 100%;
     padding: 40px 0;
+    background-color: #ffffff;
     text-align: center;
 }
 
 .destinos h2 {
-    font-size: 2rem;
     margin-bottom: 30px;
-    font-weight: bold;
+    color: #1E1E1E;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
 }
 
 .carrossel-destinos {
@@ -242,7 +264,7 @@ h1 {
     margin-bottom: 50px;
 }
 
-.card-destino {
+#card-destino {
     width: 280px;
     height: 380px;
     border-radius: 15px;
@@ -253,17 +275,17 @@ h1 {
     transition: transform 0.3s ease;
 }
 
-.card-destino:hover {
+#card-destino:hover {
     transform: scale(1.05);
 }
 
-.card-destino img {
+#card-destino img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.card-destino h5 {
+#card-destino h5 {
     position: absolute;
     bottom: 15px;
     left: 20px;
@@ -273,22 +295,24 @@ h1 {
     text-shadow: 0 2px 10px rgba(0,0,0,0.9);
 }
 
-.newsletter {
-    width: 1307px;
-    height: 175px;
+.newsletter{
+    display: flex;
+    justify-content: center;
+}
 
+.nlt{
+    width: 1100px;
+    height: 150px;
     border-radius: 15px;
-
-    background: 
-        linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%),
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%),
         url('/assets/Personalizar-roteiro.png') lightgray -2.103px -155.116px / 100% 373.429% no-repeat;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 60px; 
+    padding: 50px; 
 }
 
-.newsletter-texto p {
+#newsletter-texto p {
     width: 468px;
     height: 69px;
 
@@ -350,26 +374,191 @@ h1 {
     width: 25px;
 }
 
-@media (max-width: 768px) {
-
-    .card-destino {
-        width: 90%;
-        height: 300px;
-    }
-
-    .newsletter-form {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .newsletter-form input {
-        width: 90%;
-    }
-
-    .newsletter-form button {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-    }
+/* ----------------------SUGESTÃO DE ROTEIROS------------------------*/
+.roteiro{
+    background: linear-gradient(180deg, #0077B6 0%, #87D5FF 100%);
+    height: 800px;
+}
+.roteiro h2{
+    padding-top: 50px;
+    padding-left: 50px;
+    color: #fff;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
 }
 
+.cards{
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+    padding-top: 70px;
+}
+#card1{
+    width: 300px;
+    height: 400px;
+}
+#card2{
+    width: 300px;
+    height: 400px;
+}
+#card3{
+    width: 300px;
+    height: 400px;
+}
+
+/* ----------------------SOBRE NÓS------------------------*/
+.sobre-nos{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 100%;
+    height: 800px;
+}
+.aviao img{
+    width: 800px;
+    height: 800px;
+}
+.txt-sobre{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 60px;
+    text-align: left;
+}
+.sobre-nos h2{
+    margin-left: 100px;
+    margin-right: 100px;
+    color: #000000;
+}
+.sobre-nos p{
+    margin-left: 100px;
+    margin-right: 100px;
+    color: #000000;
+}
+
+.btn-saiba-mais{
+    margin-left: 100px;
+    margin-right: 100px;
+    width: 230px;
+    height: 60px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    color: #F0EDED;
+    font-family: "Open Sans", sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    background: linear-gradient(180deg, #0077B6 0%, #87D5FF 100%);
+    box-shadow: -1px 6px 4px rgba(0, 0, 0, 0.55);
+}
+
+/* ----------------------ORÇAMENTOS SUGERIDOS------------------------*/
+
+.orcamento{
+    background: linear-gradient(180deg, #0077B6 0%, #87D5FF 100%);
+    height: 800px;
+}
+
+.orcamento h2{
+    padding-top: 50px;
+    padding-left: 50px;
+    color: #fff;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+}
+.cards-orcamento{
+    display: flex;
+    justify-content: center;
+    gap: 90px;
+    padding-top: 70px;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+#card-o-1{
+    width: 453px;
+    height: 578px;
+    border-radius: 15px;
+    border: 1px solid #90847F;
+    background: #0077B6;
+    box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+#btn-esc1{
+    color: #fff;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 6px;
+    background: var(--gradiente, linear-gradient(180deg, #5BB0DC 0%, #0077B6 100%));
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    border: 0;
+    width: 260px;
+    height: 65px;
+}
+#card-o-2{
+    width: 453px;
+    height: 578px;
+    border-radius: 15px;
+    border: 1px solid #90847F;
+    background: linear-gradient(180deg, #1B5D25 56.25%, #53945D 100%);
+    box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+#btn-esc2{
+    color: #fff;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 6px;
+    background: linear-gradient(90deg, #8A38F5 0%, #51218F 100%);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    border: 0;
+    width: 260px;
+    height: 65px;
+}
+/* #item-card2{
+    width: 400px;
+    height: 100px;
+    border-radius: 20px;
+    border: 1px solid #90847F;
+    background: #53945D;
+    position: absolute;
+    z-index: 1;
+} */
+#card-o-3{
+    width: 453px;
+    height: 578px;
+    border-radius: 15px;
+    border: 1px solid #90847F;
+    background: #000;
+    box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+#btn-esc3{
+    color: #fff;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 6px;
+    background: linear-gradient(90deg, #D9D9D9 0%, #9F9F9F 38.66%, #666 100%);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    border: 0;
+    width: 260px;
+    height: 65px;
+}
