@@ -469,6 +469,7 @@ h1{
     padding-left: 70px;
     padding-right: 70px;
 }
+
 #card-o-1{
     width: 453px;
     height: 578px;
@@ -493,6 +494,13 @@ h1{
     border: 0;
     width: 260px;
     height: 65px;
+}
+#sombra1{
+    width: 453px;
+    height: 32px;
+    border-radius: 453px;
+    background: #474444;
+    filter: blur(13.550000190734863px);
 }
 #card-o-2{
     width: 453px;
