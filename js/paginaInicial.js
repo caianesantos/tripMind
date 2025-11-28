@@ -142,3 +142,28 @@ btnTopo.addEventListener("click", () => {
         behavior: "smooth",
     });
 });
+
+// TROCAR ORIGEM E DESTINO
+const origemInput = document.getElementById("origem");
+const destinoInput = document.getElementById("destino");
+const btnTroca = document.getElementById("btnTroca");
+
+btnTroca.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    let origem = origemInput.value;
+    let destino = destinoInput.value;
+
+    // troca
+    origemInput.value = destino;
+    destinoInput.value = origem;
+
+    // animação rápida
+    origemInput.classList.add("trocou");
+    destinoInput.classList.add("trocou");
+
+    setTimeout(() => {
+        origemInput.classList.remove("trocou");
+        destinoInput.classList.remove("trocou");
+    }, 300);
+});

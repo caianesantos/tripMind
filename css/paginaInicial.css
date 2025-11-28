@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 * {
-=======
-*{
->>>>>>> 10afc7764cf2343899150807bde5a9933f059f7f
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
@@ -10,35 +6,20 @@
     font-style: normal;
 }
 
-<<<<<<< HEAD
 body {
-=======
-body{
->>>>>>> 10afc7764cf2343899150807bde5a9933f059f7f
     background-image: url(/assets/maldivas.png);
     background-repeat: no-repeat;
 }
 
-<<<<<<< HEAD
 body .header {
-=======
-body .header{
->>>>>>> 10afc7764cf2343899150807bde5a9933f059f7f
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100vh;
     box-sizing: border-box;
-<<<<<<< HEAD
 }
 
 header {
-=======
-    
-}
-
-header{
->>>>>>> 10afc7764cf2343899150807bde5a9933f059f7f
     min-height: 6rem;
     background: rgba(0, 0, 0, 0.26);
     width: 100%;
@@ -49,32 +30,20 @@ header{
     gap: 20px;
 }
 
-<<<<<<< HEAD
 #logo {
-=======
-#logo{
->>>>>>> 10afc7764cf2343899150807bde5a9933f059f7f
     width: 78px;
     height: auto;
     align-self: center;
 }
 
-<<<<<<< HEAD
 nav {
-=======
-nav{
->>>>>>> 10afc7764cf2343899150807bde5a9933f059f7f
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-grow: 1;
 }
 
-<<<<<<< HEAD
 nav ul {
-=======
-nav ul{
->>>>>>> 10afc7764cf2343899150807bde5a9933f059f7f
     display: flex;
     align-items: center;
     gap: 2rem;
@@ -84,19 +53,11 @@ nav ul{
     justify-content: center;
 }
 
-<<<<<<< HEAD
 li {
     list-style: none;
 }
 
 .categorias {
-=======
-li{
-    list-style: none;
-}
-
-.categorias{
->>>>>>> 10afc7764cf2343899150807bde5a9933f059f7f
     color: #f0eded;
     font-size: 30px;
     font-style: normal;
@@ -114,11 +75,7 @@ li{
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-<<<<<<< HEAD
 #menu {
-=======
-#menu{
->>>>>>> 10afc7764cf2343899150807bde5a9933f059f7f
     color: #f0eded;
     background: none;
     border: none;
@@ -131,33 +88,23 @@ li{
     white-space: nowrap;
     cursor: pointer;
 }
-
 #menu:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
 /*-----------------------------------------------------------------*/
 
-<<<<<<< HEAD
 body .busca {
     padding: 270px 150px;
 }
 
 h1 {
-=======
-body .busca{
-    padding: 270px 150px;
-}
-
-h1{
->>>>>>> 10afc7764cf2343899150807bde5a9933f059f7f
     color: #F0EDED;
     font-size: 50px;
     font-style: normal;
     font-weight: 800;
     line-height: normal;
     text-shadow: 4.462px 4.462px rgba(0, 0, 0, 0.25);
-<<<<<<< HEAD
 }
 
 /*----------------------------------------*/
@@ -212,7 +159,7 @@ h1{
     font-weight: 400;
 }
 
-.troca {
+.troca button {
     width: 80px;
     height: 0px;
     background: rgba(0, 0, 0, 0.46);
@@ -222,10 +169,20 @@ h1{
     justify-content: center;
 }
 
-.troca img {
+.troca button img {
     width: 40px;
     opacity: 0.9;
 }
+
+.trocou {
+    animation: trocaFlash 0.3s ease;
+}
+
+@keyframes trocaFlash {
+    0% { background-color: rgba(255,255,255,0.3); }
+    100% { background-color: transparent; }
+}
+
 
 .btn-buscar {
     width: 317.5px;
@@ -416,6 +373,3 @@ h1{
     }
 }
 
-=======
-}
->>>>>>> 10afc7764cf2343899150807bde5a9933f059f7f
